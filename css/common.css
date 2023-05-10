@@ -15,8 +15,8 @@ a {
 
 body {
     color: #222328;
-    font-size: 14px;
     background-color: #fff;
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -26,27 +26,15 @@ body {
 }
 
 /* header */
-.header {
+.header { 
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo a {
-    display: block;
-    width: 200px;
-    height: 40px;
-    text-indent: -9999px;
-    background-image: url('../images/logo.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .gnb {
     display: flex;
-    align-items: center;
 }
 
 .gnb > li {
@@ -58,38 +46,27 @@ body {
     height: 100px;
     line-height: 100px;
     padding: 0 50px;
-    position: relative; 
 }
 
-.gnb > li > a:hover {
+.gnb > li:hover > a {
     color: tomato;
 }
-
-.gnb > li > a:hover::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: tomato;
-}   
 
 .gnb ul {
     position: absolute;
     top: 100px;
     left: 0;
     width: 100%;
-    text-align: center;
-    background-color: #fff;
-    padding: 8px 0;
-    display: none;
+    background-color: #eee;
+    padding: 10px 0;
     z-index: 1;
+    display: none;
 }
 
 .gnb ul li a {
     display: block;
-    padding: 10px 0;
+    padding: 12px 0;
+    text-align: center;
 }
 
 .gnb ul li a:hover {
@@ -106,7 +83,7 @@ body {
 
 .slide {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
 }
@@ -125,12 +102,13 @@ body {
 }
 
 .tab {
-    flex: 1;
+    flex: 1;      
 }
 
 .tab_title {
     display: flex;
     gap: 4px;
+    position: relative;
 }
 
 .tab_title::after {
@@ -141,15 +119,6 @@ body {
     height: 3px;
     background-color: tomato;
 }
-
-.tab_title a {
-    display: block;
-    flex: 1;
-    background-color: #ddd;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-}   
 
 .tab_title h2 {
     height: 50px;
@@ -167,24 +136,23 @@ body {
     color: #fff;
 }
 
-.tab_contents {
-    height: 130px;
+.tab_contents {    
+    height: 130px;    
+    position: relative;
 }
 
 .tab_contents ul {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    padding: 10px;
 }
 
-.tab_contents ul.notice {
+.notice {
     width: 386px;
-    display: block;
 }
 
-.tab_contents ul.notice li a {
+.notice li a {
     display: block;
     overflow: hidden;
     white-space: nowrap;
@@ -192,36 +160,36 @@ body {
     padding: 4px 0;
 }
 
-.tab_contents ul.notice li a:hover {
+.notice li a:hover {
     text-decoration: underline;
 }
 
-.tab_contents ul.gallery {
+.gallery {
     gap: 10px;
     height: 130px;
     display: none;
 }
 
-.tab_contents ul.gallery li {
+.gallery li {
     height: 100%;
     width: 32%;
     float: left;
-    margin-right: 2%;
+    margin-right: 2%;  
 }
 
-.tab_contents ul.gallery li:last-child {
+.gallery li:last-child {
     margin: 0;
 }
 
-.tab_contents ul.gallery li img {
-    display: block; 
+.gallery li img {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;    
 }
 
 .banner {
-    flex: 1;
+    flex: 1;  
 }
 
 .banner img {
@@ -232,7 +200,7 @@ body {
 }
 
 .link {
-    flex: 1;
+    flex: 1;  
 }
 
 .link ul {
@@ -273,7 +241,7 @@ body {
     font-size: 13px;
 }
 
-.sms a:hover {
+.sns a:hover {
     background-color: #666;
     color: #fff;
 }
@@ -292,7 +260,7 @@ body {
     display: none;
 }
 
-#modal .active {
+#modal.active {
     display: block;
 }
 
@@ -300,8 +268,6 @@ body {
     font-size: 30px;
     margin-bottom: 30px;
 }
-
-#modal p {}
 
 #modal .close {
     display: block;
